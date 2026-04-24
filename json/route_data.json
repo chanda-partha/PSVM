@@ -1,0 +1,508 @@
+{
+  "routes": [
+    {
+      "pickup": "kotowali",
+      "destination": "agrabad",
+      "bus": 30,
+      "cng": 120,
+      "bike": 80,
+      "rickshaw": 60,
+      "time": "20 min"
+    },
+    {
+      "pickup": "agrabad",
+      "destination": "kotowali",
+      "bus": 30,
+      "cng": 120,
+      "bike": 80,
+      "rickshaw": 60,
+      "time": "20 min"
+    },
+    {
+      "pickup": "chakbazar",
+      "destination": "foy's lake",
+      "bus": 40,
+      "cng": 150,
+      "bike": 100,
+      "rickshaw": 70,
+      "time": "25 min"
+    },
+    {
+      "pickup": "foy's lake",
+      "destination": "chakbazar",
+      "bus": 40,
+      "cng": 150,
+      "bike": 100,
+      "rickshaw": 70,
+      "time": "25 min"
+    },
+    {
+      "pickup": "patiya",
+      "destination": "bandartila",
+      "bus": 60,
+      "cng": 200,
+      "bike": 150,
+      "rickshaw": 100,
+      "time": "40 min"
+    },
+    {
+      "pickup": "bandartila",
+      "destination": "patiya",
+      "bus": 60,
+      "cng": 200,
+      "bike": 150,
+      "rickshaw": 100,
+      "time": "40 min"
+    },
+    {
+      "pickup": "patiya",
+      "destination": "chandanaish",
+      "bus": 70,
+      "cng": 220,
+      "bike": 160,
+      "rickshaw": "not available",
+      "time": "45 min"
+    },
+    {
+      "pickup": "chandanaish",
+      "destination": "patiya",
+      "bus": 70,
+      "cng": 80,
+      "bike": 200,
+      "rickshaw": "not available",
+      "time": "45 min"
+    },
+    {
+      "pickup": "gec",
+      "destination": "muradpur",
+      "bus": 20,
+      "cng": 100,
+      "bike": 70,
+      "rickshaw": 50,
+      "time": "15 min"
+    },
+    {
+      "pickup": "muradpur",
+      "destination": "gec",
+      "bus": 20,
+      "cng": 100,
+      "bike": 70,
+      "rickshaw": 50,
+      "time": "15 min"
+    },
+    {
+      "pickup": "gec",
+      "destination": "oxygen",
+      "bus": 30,
+      "cng": 120,
+      "bike": 90,
+      "rickshaw": 60,
+      "time": "20 min"
+    },
+    {
+      "pickup": "oxygen",
+      "destination": "gec",
+      "bus": 30,
+      "cng": 120,
+      "bike": 90,
+      "rickshaw": 60,
+      "time": "20 min"
+    },
+    {
+      "pickup": "muradpur",
+      "destination": "hathazari",
+      "bus": 40,
+      "cng": 150,
+      "bike": 110,
+      "rickshaw": 80,
+      "time": "30 min"
+    },
+    {
+      "pickup": "hathazari",
+      "destination": "muradpur",
+      "bus": 40,
+      "cng": 150,
+      "bike": 110,
+      "rickshaw": 80,
+      "time": "30 min"
+    },
+    {
+      "pickup": "agrabad",
+      "destination": "patenga",
+      "bus": 50,
+      "cng": 180,
+      "bike": 130,
+      "rickshaw": "not available",
+      "time": "35 min"
+    },
+    {
+      "pickup": "patenga",
+      "destination": "agrabad",
+      "bus": 50,
+      "cng": 180,
+      "bike": 130,
+      "rickshaw": "not available",
+      "time": "35 min"
+    },
+    {
+      "pickup": "kotowali",
+      "destination": "new market",
+      "bus": 15,
+      "cng": 80,
+      "bike": 50,
+      "rickshaw": 40,
+      "time": "10 min"
+    },
+    {
+      "pickup": "new market",
+      "destination": "kotowali",
+      "bus": 15,
+      "cng": 80,
+      "bike": 50,
+      "rickshaw": 40,
+      "time": "10 min"
+    },
+    {
+      "pickup": "chakbazar",
+      "destination": "muradpur",
+      "bus": 25,
+      "cng": 100,
+      "bike": 70,
+      "rickshaw": 60,
+      "time": "15 min"
+    },
+    {
+      "pickup": "muradpur",
+      "destination": "chakbazar",
+      "bus": 25,
+      "cng": 100,
+      "bike": 70,
+      "rickshaw": 60,
+      "time": "15 min"
+    },
+    {
+      "pickup": "gec",
+      "destination": "lalkhan bazar",
+      "bus": 20,
+      "cng": 90,
+      "bike": 60,
+      "rickshaw": 50,
+      "time": "12 min"
+    },
+    {
+      "pickup": "lalkhan bazar",
+      "destination": "gec",
+      "bus": 20,
+      "cng": 90,
+      "bike": 60,
+      "rickshaw": 50,
+      "time": "12 min"
+    },
+    {
+      "pickup": "muradpur",
+      "destination": "nasirabad",
+      "bus": 15,
+      "cng": 80,
+      "bike": 60,
+      "rickshaw": 50,
+      "time": "10 min"
+    },
+    {
+      "pickup": "nasirabad",
+      "destination": "muradpur",
+      "bus": 15,
+      "cng": 80,
+      "bike": 60,
+      "rickshaw": 50,
+      "time": "10 min"
+    },
+    {
+      "pickup": "gec",
+      "destination": "pahartali",
+      "bus": 30,
+      "cng": 120,
+      "bike": 90,
+      "rickshaw": 70,
+      "time": "20 min"
+    },
+    {
+      "pickup": "pahartali",
+      "destination": "gec",
+      "bus": 30,
+      "cng": 120,
+      "bike": 90,
+      "rickshaw": 70,
+      "time": "20 min"
+    },
+    {
+      "pickup": "pahartali",
+      "destination": "sitakunda",
+      "bus": 60,
+      "cng": 220,
+      "bike": 180,
+      "rickshaw": "not available",
+      "time": "50 min"
+    },
+    {
+      "pickup": "sitakunda",
+      "destination": "pahartali",
+      "bus": 60,
+      "cng": 220,
+      "bike": 180,
+      "rickshaw": "not available",
+      "time": "50 min"
+    },
+    {
+      "pickup": "agrabad",
+      "destination": "halishahar",
+      "bus": 25,
+      "cng": 100,
+      "bike": 80,
+      "rickshaw": 60,
+      "time": "15 min"
+    },
+    {
+      "pickup": "halishahar",
+      "destination": "agrabad",
+      "bus": 25,
+      "cng": 100,
+      "bike": 80,
+      "rickshaw": 60,
+      "time": "15 min"
+    },
+    {
+      "pickup": "halishahar",
+      "destination": "bandartila",
+      "bus": 30,
+      "cng": 120,
+      "bike": 90,
+      "rickshaw": 70,
+      "time": "20 min"
+    },
+    {
+      "pickup": "bandartila",
+      "destination": "halishahar",
+      "bus": 30,
+      "cng": 120,
+      "bike": 90,
+      "rickshaw": 70,
+      "time": "20 min"
+    },
+    {
+      "pickup": "muradpur",
+      "destination": "bayezid",
+      "bus": 20,
+      "cng": 90,
+      "bike": 70,
+      "rickshaw": 60,
+      "time": "15 min"
+    },
+    {
+      "pickup": "bayezid",
+      "destination": "muradpur",
+      "bus": 20,
+      "cng": 90,
+      "bike": 70,
+      "rickshaw": 60,
+      "time": "15 min"
+    },
+    {
+      "pickup": "bayezid",
+      "destination": "oxygen",
+      "bus": 15,
+      "cng": 80,
+      "bike": 60,
+      "rickshaw": 50,
+      "time": "10 min"
+    },
+    {
+      "pickup": "oxygen",
+      "destination": "bayezid",
+      "bus": 15,
+      "cng": 80,
+      "bike": 60,
+      "rickshaw": 50,
+      "time": "10 min"
+    },
+    {
+      "pickup": "epz",
+      "destination": "agrabad",
+      "bus": 30,
+      "cng": 120,
+      "bike": 90,
+      "rickshaw": 70,
+      "time": "20 min"
+    },
+    {
+      "pickup": "agrabad",
+      "destination": "epz",
+      "bus": 30,
+      "cng": 120,
+      "bike": 90,
+      "rickshaw": 70,
+      "time": "20 min"
+    },
+    {
+      "pickup": "epz",
+      "destination": "patenga",
+      "bus": 20,
+      "cng": 90,
+      "bike": 70,
+      "rickshaw": "not available",
+      "time": "15 min"
+    },
+    {
+      "pickup": "patenga",
+      "destination": "epz",
+      "bus": 20,
+      "cng": 90,
+      "bike": 70,
+      "rickshaw": "not available",
+      "time": "15 min"
+    },
+    {
+      "pickup": "kaptai road",
+      "destination": "muradpur",
+      "bus": 25,
+      "cng": 100,
+      "bike": 80,
+      "rickshaw": 60,
+      "time": "18 min"
+    },
+    {
+      "pickup": "muradpur",
+      "destination": "kaptai road",
+      "bus": 25,
+      "cng": 100,
+      "bike": 80,
+      "rickshaw": 60,
+      "time": "18 min"
+    },
+    {
+      "pickup": "andarkilla",
+      "destination": "kotowali",
+      "bus": 10,
+      "cng": 60,
+      "bike": 40,
+      "rickshaw": 30,
+      "time": "8 min"
+    },
+    {
+      "pickup": "kotowali",
+      "destination": "andarkilla",
+      "bus": 10,
+      "cng": 60,
+      "bike": 40,
+      "rickshaw": 30,
+      "time": "8 min"
+    },
+    {
+      "pickup": "andarkilla",
+      "destination": "new market",
+      "bus": 15,
+      "cng": 70,
+      "bike": 50,
+      "rickshaw": 40,
+      "time": "10 min"
+    },
+    {
+      "pickup": "new market",
+      "destination": "andarkilla",
+      "bus": 15,
+      "cng": 70,
+      "bike": 50,
+      "rickshaw": 40,
+      "time": "10 min"
+    },
+    {
+      "pickup": "mehedibag",
+      "destination": "gec",
+      "bus": 15,
+      "cng": 70,
+      "bike": 50,
+      "rickshaw": 40,
+      "time": "10 min"
+    },
+    {
+      "pickup": "gec",
+      "destination": "mehedibag",
+      "bus": 15,
+      "cng": 70,
+      "bike": 50,
+      "rickshaw": 40,
+      "time": "10 min"
+    },
+    {
+      "pickup": "mehedibag",
+      "destination": "lalkhan bazar",
+      "bus": 10,
+      "cng": 60,
+      "bike": 40,
+      "rickshaw": 30,
+      "time": "8 min"
+    },
+    {
+      "pickup": "lalkhan bazar",
+      "destination": "mehedibag",
+      "bus": 10,
+      "cng": 60,
+      "bike": 40,
+      "rickshaw": 30,
+      "time": "8 min"
+    },
+    {
+      "pickup": "pahartali",
+      "destination": "halishahar",
+      "bus": 25,
+      "cng": 100,
+      "bike": 80,
+      "rickshaw": 60,
+      "time": "18 min"
+    },
+    {
+      "pickup": "halishahar",
+      "destination": "pahartali",
+      "bus": 25,
+      "cng": 100,
+      "bike": 80,
+      "rickshaw": 60,
+      "time": "18 min"
+    },
+    {
+      "pickup": "bayezid",
+      "destination": "hathazari",
+      "bus": 35,
+      "cng": 140,
+      "bike": 110,
+      "rickshaw": 80,
+      "time": "25 min"
+    },
+    {
+      "pickup": "hathazari",
+      "destination": "bayezid",
+      "bus": 35,
+      "cng": 140,
+      "bike": 110,
+      "rickshaw": 80,
+      "time": "25 min"
+    },
+    {
+      "pickup": "oxygen",
+      "destination": "hathazari",
+      "bus": 30,
+      "cng": 120,
+      "bike": 100,
+      "rickshaw": 70,
+      "time": "20 min"
+    },
+    {
+      "pickup": "hathazari",
+      "destination": "oxygen",
+      "bus": 30,
+      "cng": 120,
+      "bike": 100,
+      "rickshaw": 70,
+      "time": "20 min"
+    }
+  ]
+}

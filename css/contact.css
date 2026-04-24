@@ -1,0 +1,118 @@
+/* ===== RESET + LAYOUT ===== */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+    padding-top: 70px;
+    /* fix for fixed navbar */
+}
+
+/* MAIN CONTENT grows */
+.main-content {
+    flex: 1;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: #1a237e;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: #fff !important;
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+    color: #c5cae9 !important;
+}
+
+/* ===== CONTACT CARD ===== */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 130px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+/* BUTTONS */
+.btn {
+    width: 100%;
+    margin-top: 12px;
+    border-radius: 10px;
+}
+
+.btn-submit {
+    background: #1a237e;
+    color: white;
+}
+
+.btn-call {
+    background: #28a745;
+    color: white;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #1a237e;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer-links a {
+    color: #c5cae9;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-social i {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.footer-copy {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.name {
+
+    margin: 10px;
+}
+
+input {
+    display: block;
+    border-width: 1px;
+    border-radius: 10px;
+
+}

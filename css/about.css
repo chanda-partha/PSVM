@@ -1,0 +1,280 @@
+/* :root {
+    --toggle-color: #27279b;
+    --sidebar-bg: #5775d6;
+    --text-color: #fff;
+    --primary-color: #1c55cf;
+    --body-color: #a4c1df;
+    --sidebar-hover: #4d93d4;
+    --text-color-personmane: #fff;
+    --text-color-designation: hsl(0, 0%, 0%);
+    --button-bg: #5887eb;
+
+
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+} */
+
+
+body {
+    
+    background: #a4c1df;
+}
+
+/* nav {
+    font-family: "Share Tech Mono", "Roboto Mono", "Source Code Pro", monospace;
+    letter-spacing: 0px;
+    font-weight: bold;
+    font-size: 1.8rem;
+    border-radius: 0px;
+} */
+ 
+ 
+
+#header-box {
+    border-radius: 19px;
+    text-align: center;
+    background: #1c1a1248;
+    /* color: snow; */
+    border: 1px solid #d10f0f4f;
+    padding-block: 0.5rem;
+    padding-inline: 0rem;
+    display: flex;
+    align-items: center;
+    font-family: "Space Grotesk", sans-serif;
+    gap: 8px;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 2px 10px;
+    font-size: 1.1rem;
+}
+
+.container span {
+    font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", "Consolas", monospace;
+    /* color: #0a1d1f; */
+    color: rgb(7, 6, 0);
+}
+
+h2 {
+    font-family: "Share Tech Mono", "Roboto Mono", "Source Code Pro", monospace;
+    letter-spacing: 0px;
+    font-weight: 700;
+    /* opacity: 1; */
+    transform: none;
+}
+
+.container h2 span {
+    /* color: rgba(245, 159, 11, 0.973); */
+    background: linear-gradient(to right, #e65c00, #f9a825);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.about-intro{
+    color: rgb(82, 70, 2);           
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;        
+    /* text-align: center; */
+    letter-spacing: 0.3px;
+    opacity: 0.85;
+    max-width: 90rem;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", "Consolas", monospace;
+}
+.vision-card{
+    /* border: 1px solid rgba(255, 193, 7, 0.3); */
+    border-radius: 12px;
+    padding: 20px 24px;
+    /* max-width: 820px; */
+    background: #0d120d36;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 0.5rem;
+}
+.card-text{
+    /* font-size: 1.45rem; */
+    line-height: 1.7r;
+    margin: 0;
+    text-align: left;
+    color: #000000;
+    font-weight: normal;
+    font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", "Consolas", monospace;
+}
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+.icon-box {
+    background: #0ca85fbe;
+    border-radius: 8px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-box2 {
+    background: oklch(53.184% 0.09108 210.911 / 0.795);
+    border-radius: 8px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-box3 {
+    background: oklch(54.1% .281 293.009);
+    border-radius: 8px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-title{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1rem;
+    color:rgb(8, 82, 104);
+    font-weight: 700;
+}
+.card-title2{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1rem;
+    color:rgb(6, 150, 83);
+    font-weight: 700;
+}
+.vision{
+    padding-bottom: 10px;
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(470px, 2fr)); 
+    gap: 16px;
+    padding-left: 60px;
+    padding-right: 60px;
+    /* padding-inline: 9px; */
+}
+.custom-list li{
+    padding-left: 0;
+    list-style: none;
+    
+}
+.custom-list li::before{
+    content:"✔️";
+    color: #00e5ff;
+    
+}
+.custom-list{
+    font-size: 1.35rem;
+    padding-left: 0;
+    /* text-align: left; */
+    color: #000000;
+    font-weight: normal;
+    font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", "Consolas", monospace;
+}
+li{
+    margin-bottom: 0.8rem;
+}
+.Roadmap {
+    position: relative;
+    padding: 10px 0 10px 40px;
+}
+
+.Roadmap::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #0ca85fbe;
+}
+.Roadmap-item {
+    position: relative;
+    margin-bottom: 24px;
+}
+.card {
+    background: #0d120d22;
+    border: 1px solid #0ca85f87;
+    border-radius: 12px;
+    padding: 8px 10px;
+}
+.year {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.year.blue { 
+    color: #07ac5f; 
+}
+.card h3 {
+    color: #a9640a;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 6px 0 4px;
+    padding-bottom: 8px;
+}
+.card p {
+    color: rgb(82, 70, 2);
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.5;
+    text-align: left;
+}
+.stakhohlders{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 10px;
+    margin-inline: 1rem;
+    margin-bottom: 6rem;
+}
+.icon-gov{
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #193cb8;
+    margin-left: 6rem;
+    margin-right: 11rem;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    margin-top: 0px;
+    margin-bottom: 7px;
+    /* margin-top: 0px;
+    margin-bottom: 12px;
+    padding-left: 160px;
+    padding-right: 160px; */
+}
+.gov{
+    background: #0d120d52;
+    border: 1px solid #d10f0f60;
+    border-radius: 16px;
+    /* padding: 32px 24px; */
+    padding-bottom: 3rem;
+    padding-top: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 0.4rem;
+    gap: 14px;
+}
+.gov-title{
+    margin-bottom: 0.5rem;
+    line-height: 1rem;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Space Grotesk", sans-serif;
+    align-items: center;
+    color: #844c03;
+}
+.gov-desc{
+    color: #000000;
+    margin-bottom: 0px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 12px;
+    line-height: 1.5;
+    font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", "Consolas", monospace;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/registration_selection.css">
+  <title>Register</title>
+
+</head>
+
+<body>
+
+  <!--Made by - Najnin Sultana - 1212-->
+
+  <header>
+    <div class="navbar">
+      <div class="logo"><a href="../index.html">PTMS</a></div>
+      <ul class="links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./system_feature.html">System</a></li>
+        <li><a href="#">ContactUs</a></li>
+      </ul>
+      <a href="./login.html" class="action_btn">Log in</a>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="dropdown_menu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./system_feature.html">System</a></li>
+      <li><a href="#">ContactUs</a></li>
+      <li><a href="./login.html" class="action_btn">Log in</a></li>
+    </div>
+
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+
+      <h1>Create Your Account</h1>
+      <p class="subtitle">Who are you registering as?</p>
+
+      <div class="roles">
+
+        <button class="role-btn" onclick="window.location.href='./public_registration_form.html'">
+          <div class="role-icon"><i class="fa-solid fa-user"></i></div>
+          <div>
+
+            <div class="role-title">Register as Public</div>
+            <div class="role-desc">For citizens & general users</div>
+          </div>
+          <div class="role-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        </button>
+
+        <button class="role-btn" onclick="window.location.href='./police_registration_ui.html'">
+          <div class="role-icon"><i class="fa-solid fa-user-shield"></i></div>
+          <div>
+            <div class="role-title">Register as Police</div>
+            <div class="role-desc">For law enforcement officers</div>
+          </div>
+          <div class="role-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        </button>
+
+        <button class="role-btn" onclick="window.location.href='./vehicle_registration_forn.html'">
+          <div class="role-icon"><i class="fa-solid fa-car"></i></div>
+          <div>
+            <div class="role-title">Register a Vehicle</div>
+            <div class="role-desc">Add your vehicle to the system</div>
+          </div>
+          <div class="role-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        </button>
+      </div>
+
+      <p class="login-text">Already have an account? <a href="./login.html">Log in</a></p>
+
+    </div>
+
+  </div>
+
+
+  <footer class="fixed-footer"
+    style="color:#94a3b8; padding:20px 15px; text-align:center; font-family:Arial, sans-serif;">
+    <div style="max-width:1000px; margin:0 auto;">
+      <h3 style="margin-bottom:5px; font-size:18px; color:#f1f5f9;">Myriyad4 tech</h3>
+      <p style="margin-bottom:12px; font-size:13px; color:#94a3b8;">Innovating the digital world with smart solutions
+      </p>
+
+      <div style="margin-bottom:12px; font-size:13px;">
+        <a href="../index.html" style="color:#60a5fa; text-decoration:none; margin:0 8px;">Home</a>
+        <a href="./about_us.html" style="color:#60a5fa; text-decoration:none; margin:0 8px;">About Us</a>
+        <a href="./about.html" style="color:#60a5fa; text-decoration:none; margin:0 8px;">About</a>
+        <a href="#" style="color:#60a5fa; text-decoration:none; margin:0 8px;">Contact</a>
+      </div>
+
+      <div style="margin-bottom:12px; font-size:13px;">
+        <a href="#" style="color:#94a3b8; margin:0 5px;">Facebook</a> |
+        <a href="#" style="color:#94a3b8; margin:0 5px;">Twitter</a> |
+        <a href="#" style="color:#94a3b8; margin:0 5px;">LinkedIn</a>
+      </div>
+
+      <p style="color:#64748b; font-size:12px; margin:0;">&copy; 2026 myriyad4 tech. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('.toggle_btn').click(function () {
+        $('.dropdown_menu').toggleClass('open');
+
+        const isOpen = $('.dropdown_menu').hasClass('open');
+
+        $('.toggle_btn i').attr(
+          'class',
+          isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+        );
+      });
+    });
+  </script>
+
+</body>
+
+</html>

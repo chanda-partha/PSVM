@@ -1,0 +1,187 @@
+ :root {
+     --primary-color: #1a237e;
+     --secondary-color: #303f9f;
+     --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+     --card-bg: #ffffff;
+     --text-main: #2c3e50;
+     --accent-blue: #3f51b5;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+ }
+
+ body {
+     background: var(--bg-gradient);
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 40px 20px;
+ }
+
+ .registration-container {
+     background: var(--card-bg);
+     padding: 50px;
+     border-radius: 16px;
+     width: 100%;
+     max-width: 800px;
+     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+     border-top: 8px solid var(--primary-color);
+ }
+
+ .form-header {
+     text-align: center;
+     margin-bottom: 30px;
+ }
+
+ .form-header h2 {
+     color: var(--primary-color);
+     font-size: 30px;
+     letter-spacing: 1.5px;
+     text-transform: uppercase;
+ }
+
+ .section-title {
+     font-size: 16px;
+     color: var(--accent-blue);
+     font-weight: 700;
+     margin: 25px 0 15px;
+     padding-bottom: 5px;
+     border-bottom: 2px solid #eef2f3;
+     text-transform: uppercase;
+ }
+
+ .photo-upload-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-bottom: 30px;
+ }
+
+ .photo-preview {
+     width: 120px;
+     height: 120px;
+     border: 3px dashed #cbd5e0;
+     border-radius: 12px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: #f8fafc;
+     overflow: hidden;
+     transition: 0.3s;
+ }
+
+ .photo-preview:hover {
+     border-color: var(--accent-blue);
+ }
+
+ .upload-btn-label {
+     margin-top: 10px;
+     padding: 6px 15px;
+     background: #eef2f3;
+     border-radius: 20px;
+     font-size: 12px;
+     font-weight: 600;
+     color: var(--primary-color);
+     cursor: pointer;
+ }
+
+ .input-grid {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 20px;
+ }
+
+ .full-width {
+     grid-column: span 2;
+ }
+
+ .input-group {
+     margin-bottom: 18px;
+ }
+
+ label {
+     display: block;
+     font-size: 13px;
+     font-weight: 600;
+     color: #4a5568;
+     margin-bottom: 8px;
+ }
+
+ input,
+ select,
+ textarea {
+     width: 100%;
+     padding: 12px 15px;
+     border: 1.5px solid #e2e8f0;
+     border-radius: 8px;
+     font-size: 14px;
+     transition: all 0.3s ease;
+     background: #ffffff;
+ }
+
+ input:focus,
+ select:focus,
+ textarea:focus {
+     outline: none;
+     border-color: var(--accent-blue);
+     box-shadow: 0 0 0 4px rgba(63, 81, 181, 0.1);
+ }
+
+ textarea {
+     height: 80px;
+     resize: none;
+ }
+
+ .submit-btn {
+     grid-column: span 2;
+     padding: 16px;
+     background: var(--primary-color);
+     color: white;
+     border: none;
+     border-radius: 8px;
+     font-size: 16px;
+     font-weight: 700;
+     cursor: pointer;
+     transition: 0.3s;
+     margin-top: 20px;
+     text-transform: uppercase;
+ }
+
+ .submit-btn:hover {
+     background: var(--secondary-color);
+     transform: translateY(-2px);
+     box-shadow: 0 5px 15px rgba(26, 35, 126, 0.3);
+ }
+
+ .tech-footer {
+     margin-top: 50px;
+     text-align: center;
+     width: 100%;
+     color: #2c3e50;
+ }
+
+ .footer-links a {
+     color: var(--primary-color);
+     text-decoration: none;
+     margin: 0 12px;
+     font-size: 14px;
+     font-weight: 500;
+ }
+
+
+
+ @media (max-width: 600px) {
+     .input-grid {
+         grid-template-columns: 1fr;
+     }
+
+     .full-width,
+     .submit-btn {
+         grid-column: span 1;
+     }
+ }

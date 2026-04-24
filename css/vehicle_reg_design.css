@@ -1,0 +1,160 @@
+
+    div.container-main {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        margin: 0;
+        flex-direction: column;
+    }
+    
+
+    .form-container {
+        width: 100%;
+        max-width: 700px;
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-image {
+        width: 100%;
+        height: 180px;
+        background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=600');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .form-title {
+        background-color: #00bcd4;
+        color: white;
+        padding: 15px 20px;
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .row {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+    }
+
+    .field-group {
+        flex: 1;
+        min-width: 120px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    label span {
+        color: red;
+    }
+
+    input,
+    select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+        outline: none;
+    }
+
+    input::placeholder {
+        color: #aaa;
+    }
+
+    input:focus {
+        border-color: #00bcd4;
+    }
+
+    .full-width {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .address-line {
+        margin-bottom: 10px;
+    }
+
+    #button-row {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 25px;
+    }
+
+
+
+    #registerbtn {
+        background-color: #00bcd4;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #registerbtn:hover {
+        background-color: #0097a7;
+    }
+
+    
+  footer {
+      background: rgba(16, 126, 160, 0.2);
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+      backdrop-filter: blur(5px);
+      position: relative;
+  }
+
+  .footer-content h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+  }
+
+  .footer-content p {
+      font-size: 13px;
+      opacity: 0.7;
+      margin-bottom: 15px;
+  }
+
+  .footer-nav a,
+  .social-links a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 13px;
+      opacity: 0.8;
+      transition: 0.3s;
+  }
+
+  .footer-nav a:hover,
+  .social-links a:hover {
+      opacity: 1;
+      color: #165896;
+  }
+
+
+    @media (max-width: 600px) {
+        .row {
+            flex-direction: column;
+        }
+    }

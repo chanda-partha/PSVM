@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/vehicle_reg_design.css">
+    <script type="module" src="../js/vehicle_registraion.js"></script>
+</head>
+
+<body>
+
+    <!-- Made by - Partha Chanda - 1205 -->
+    <div class="container-main">
+        <div class="form-container">
+            <div class="header-image"></div>
+            <div class="form-title">Vehicle registration</div>
+
+            <form>
+
+                <div id="signUpMessage" class="alert d-none"></div>
+                <div class="row">
+                    <div class="field-group">
+                        <label>Vehicle model <span>*</span></label>
+                        <input type="text" placeholder="F-150, Highlander, etc." id="vehicleModel">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field-group">
+                        <label>Color <span>*</span></label>
+                        <input type="text" id="vehicleColor">
+                    </div>
+                    <div class="field-group">
+                        <label>Mileage <span>*</span></label>
+                        <input type="text" id="mileage">
+                    </div>
+                </div>
+
+                <div class="field-group full-width">
+                    <label>Government Registration Number<span>*</span></label>
+                    <input type="text" id="registraionNumber">
+                </div>
+
+                <p style="margin-top: 30px;">Owner's Information</p>
+
+                <div class="field-group full-width" style="margin-top: 10px;">
+                    <label>Name <span>*</span></label>
+                    <input type="text" id="ownerName">
+                </div>
+
+                <div class="field-group full-width">
+                    <label>Email <span>*</span></label>
+                    <input type="email" placeholder="you@example.com" id="email">
+                </div>
+
+                <div class="field-group full-width">
+                    <label>Address <span>*</span></label>
+
+                    <input type="text" id="owenerAddress">
+                </div>
+                <div class="field-group full-width">
+                    <label for="pass">Password</label>
+                    <input type="password" id="pass" placeholder="••••••••" required>
+                </div>
+
+
+
+
+                <div class="submit-container" id="button-row">
+                    <button type="submit" id="registerbtn">REGISTER</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>MYRIYAD4 TECH</h3>
+            <p>Innovating the digital world with smart solutions</p>
+
+            <div class="footer-nav">
+                <a href="../index.html">Home</a> | <a href="./about.html">About</a> | <a href="#">Services</a>
+            </div>
+
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+
+            <p class="copyright">&copy; 2026 Myriyad4 Tech. All rights reserved.</p>
+        </div>
+        <div class="card-corner-name">Kanis Fatema Etu</div>
+    </footer>
+
+    <div class="maker" style=" display : flex ; justify-content:  flex-end; color: #777;">PARTHA CHANDA </div>
+</body>
+
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Side Navbar</title>
+    <link rel="stylesheet" href="../css/police_homepage_ui.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+
+<body>
+    <!-- Made by - Partha Chanda - 1205 -->
+
+    <nav class="sidebar close" id="sidebar">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img id="sidebarPhoto" alt="">
+                </span>
+            </div>
+            <div class="name-offcicer">
+                <span class="text name">PARTHA CHANDA</span>
+                <span class="text designation">INSPECTOR</span>
+            </div>
+
+
+
+            <i class="bx bx-chevron-left toggle" id="rigth_transation_arrow"></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <div class="menu-search">
+                    <li class="search-box">
+                        <i class="bx bx-search icon"></i>
+                        <input class="text search-input" type="text" placeholder="Search...">
+                    </li>
+
+                </div>
+                <ul class="menu-links">
+
+
+                    <li class="nav-link">
+                        <a href="#" onclick="showIcons('dashboard')">
+                            <i class="bx bx-home icon"></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#" onclick="showIcons('profile')">
+                            <i class="bx bx-user icon"></i>
+                            <span class="text nav-text">Profile</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="police_case_records_ui.html">
+                            <i class="bx bx-file icon"></i>
+                            <span class="text nav-text">Case Records</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a onclick="showIcons('penalty')">
+                            <i class="bx bx-receipt icon"></i>
+                            <span class="text nav-text">Penalty</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-link">
+                        <a href="police_complaints_ui.html">
+                            <i class="bx bx-comment icon"></i>
+                            <span class="text nav-text">Complaints</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#" onclick="showIcons('settings')">
+                            <i class="bx bx-cog icon"></i>
+                            <span class="text nav-text">Settings</span>
+                        </a>
+                    </li>
+
+
+
+                    <div class="button-content">
+                        <li class="nav-link">
+                            <a id="logout">
+                                <i class="bx bx-log-out icon"></i>
+                                <span class="text nav-text">Logout</span>
+                            </a>
+                        </li>
+
+                        <li class="mode">
+                            <div class="moon-sun">
+                                <i class="bx bx-moon icon moon "></i>
+                                <i class="bx bx-sun icon sun"></i>
+                            </div>
+                            <span class="text mode-text">Dark Mode</span>
+
+                            <div class="toggle-switch">
+                                <span class="switch"></span>
+                            </div>
+                        </li>
+                    </div>
+
+                </ul>
+            </div>
+    </nav>
+
+
+    <section class="home">
+
+
+        <div class="dashboard icon-controled active" id="dashboard">
+            <!-- Total Cases -->
+            <div class="card">
+                <h3>Total Cases</h3>
+                <div class="stats">120</div>
+                <span class="badge yellow">+5 today</span>
+            </div>
+
+            <!-- Pending Cases -->
+            <div class="card">
+                <h3>Pending Cases</h3>
+                <div class="stats">32</div>
+                <span class="badge red">Urgent</span>
+            </div>
+
+            <!-- Solved Cases -->
+            <div class="card">
+                <h3>Solved Cases</h3>
+                <div class="stats">88</div>
+                <span class="badge green">Good Progress</span>
+            </div>
+
+            <!-- Complaints -->
+            <div class="card">
+                <h3>Complaints</h3>
+                <div class="stats">54</div>
+                <p>New complaints received</p>
+                <a href="#" class="button">View</a>
+            </div>
+
+            <!-- Profile Summary -->
+            <div class="card">
+                <h3>Officer Profile</h3>
+                <p>Name: Partha Chanda</p>
+                <p>Rank: Inspector</p>
+                <p>Station: Chittagong</p>
+                <a href="#" class="button">Edit Profile</a>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="card">
+                <h3>Quick Actions</h3>
+                <a href="#" class="button">+ Add Case</a><br>
+                <a href="#" class="button">Register Complaint</a>
+            </div>
+        </div>
+
+        <div class="profile icon-controled" id="profile">
+
+            <div class="form-container">
+
+                <div class="row">
+                    <div class="field" style="flex: 2;">
+                        <label>Police ID :</label>
+                        <span class="db-value" id="policeId"></span>
+                    </div>
+                    <div class="field" style="flex: 1;">
+                        <label>Designation :</label>
+                        <span class="db-value" id="designation"></span>
+                    </div>
+                    <div class="field" style="flex: 1;">
+                        <label>Bl. Group:</label>
+                        <span class="db-value" id="bloodGroup"></span>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top: 50px;">
+                    <div class="field" style="flex: 3;">
+                        <label>Name:</label>
+                        <span class="db-value" id="name"></span>
+                    </div>
+                    <div class="field" style="flex: 1;">
+                        <label>Sex:</label>
+                        <span class="db-value" id="gender"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field">
+                        <label>Nationality:</label>
+                        <span class="db-value" id="nationality"></span>
+                    </div>
+                    <div class="field">
+                        <label>NID No.:</label>
+                        <span class="db-value" id="nid"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field">
+                        <label>Date of Birth:</label>
+                        <span class="db-value" id="dob"></span>
+                    </div>
+                </div>
+
+                <div class="field full-width">
+                    <label>Mother's Name:</label>
+                    <span class="db-value" id="mother"></span>
+                </div>
+
+                <div class="field full-width" style="margin-top: 20px;">
+                    <label>Father's Name:</label>
+                    <span class="db-value" id="father"></span>
+                </div>
+
+                <div class="field full-width" style="margin-top: 30px;">
+                    <label>Present Address:</label>
+                    <span class="db-value" id="presentAddress"></span>
+                </div>
+
+                <div class="field full-width" style="margin-top: 20px;">
+                    <label>Permanent Address:</label>
+                    <span class="db-value" id="permanentAddress"></span>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="settings icon-controled" id="settings">
+
+            <div class="form-container">
+
+                <h2 style="margin-bottom: 20px;">Settings</h2>
+
+
+                <div class="field full-width">
+                    <label>Upload Profile Photo</label>
+                    <input type="file" id="profilePhotoInput" accept="image/*">
+                </div>
+
+
+                <div class="field full-width" style="margin-top: 20px;">
+                    <img id="previewImage"
+                        style="width:120px; height:120px; border-radius:50%; object-fit:cover; border:2px solid #ccc;">
+                </div>
+
+                <div class="field full-width" style="margin-top: 20px;">
+                    <button id="savePhotoBtn" class="button">
+                        Save Photo
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="penalty icon-controled" id="penalty">
+
+            <div class="form-container penalty-card">
+
+                <h2 class="penalty-title">🚓 Vehicle Penalty </h2>
+
+                <!-- INPUT GROUP -->
+                <div class="input-group">
+                    <label>Vehicle Registration Number</label>
+                    <div class="input-box">
+                        <i class="bx bx-car"></i>
+                        <input type="text" id="penaltyRegNumber" placeholder="e.g. CTG-1234">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Fine Amount</label>
+                    <div class="input-box">
+                        <i class="bx bx-money"></i>
+                        <input type="number" id="penaltyAmount" placeholder="Enter amount">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Reason</label>
+                    <div class="input-box">
+                        <i class="bx bx-error-circle"></i>
+                        <input type="text" id="penaltyReason" placeholder="Speeding / Signal break">
+                    </div>
+                </div>
+
+                <!-- BUTTON -->
+                <button id="submitPenaltyBtn" class="penalty-btn">
+                    ⚡ Issue Fine
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="module" src="../js/police_homepage_ui.js"></script>
+
+</body>
+
+</html>

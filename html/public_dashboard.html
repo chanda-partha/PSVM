@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Public Users Dashboard</title>
+    <link rel="stylesheet" href="../css/public_dashboard.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="module" src="../js/public_registration_homepage.js"></script>
+
+
+</head>
+
+<body>
+
+<!-- Made by - Partha Chanda - 1205 -->
+    <nav class="sidebar close" id="sidebar">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img id="sidebarPhoto" alt="">
+                </span>
+            </div>
+            <div class="name-offcicer">
+                <span class="text name" id="loggedUserFName"></span>
+
+            </div>
+
+
+
+            <i class="bx bx-chevron-left toggle" id="rigth_transation_arrow"></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <div class="menu-search">
+                    <li class="search-box">
+                        <i class="bx bx-search icon"></i>
+                        <input class="text search-input" type="text" placeholder="Search...">
+                    </li>
+
+                </div>
+                <ul class="menu-links">
+
+
+                    <li class="nav-link">
+                        <a onclick="showIcons('dashboard')">
+                            <i class="bx bx-home icon"></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a onclick="showIcons('profile')">
+                            <i class="bx bx-user icon"></i>
+                            <span class="text nav-text">Profile</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-link">
+                        <a onclick="showIcons('route')">
+                            <i class="bx bx-map icon"></i>
+                            <span class="text nav-text">Find Route</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a onclick="showIcons('settings')">
+                            <i class="bx bx-cog icon"></i>
+                            <span class="text nav-text">Settings</span>
+                        </a>
+                    </li>
+
+
+
+                    <div class="button-content">
+                        <li class="nav-link" id="logout">
+                            <a>
+                                <i class="bx bx-log-out icon"></i>
+                                <span class="text nav-text">Logout</span>
+                            </a>
+                        </li>
+
+                        <li class="mode">
+                            <div class="moon-sun">
+                                <i class="bx bx-moon icon moon "></i>
+                                <i class="bx bx-sun icon sun"></i>
+                            </div>
+                            <span class="text mode-text">Dark Mode</span>
+
+                            <div class="toggle-switch">
+                                <span class="switch"></span>
+                            </div>
+                        </li>
+                    </div>
+
+                </ul>
+            </div>
+    </nav>
+
+
+    <section class="home">
+
+
+        <div class="dashboard icon-controled active" id="dashboard">
+
+            <!-- CARD 1 -->
+            <div class="card">
+                <h3>Total Rides</h3>
+                <div class="stats">0</div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card">
+                <h3>Total Complaints</h3>
+                <div class="stats">0</div>
+            </div>
+
+        </div>
+
+
+        </div>
+
+        <div class="profile icon-controled" id="profile">
+
+            <div class="form-container">
+
+                <div class="row">
+                    <div class="field" style="flex: 2;">
+                        <label>Firstname:</label>
+                        <span class="db-value" id="FName"></span>
+                    </div>
+                    <div class="field" style="flex: 1;">
+                        <label>Last Name :</label>
+                        <span class="db-value" id="loggedUserLName"></span>
+                    </div>
+                    <div class="field" style="flex: 1;">
+                        <label>Email :</label>
+                        <span class="db-value" id="loggedUserEmail"></span>
+                    </div>
+                    <div class="field" style="flex: 1;">
+                        <label>Mobile :</label>
+                        <span class="db-value" id="loggedUserMobile"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="settings icon-controled" id="settings">
+
+            <div class="form-container">
+
+                <h2 style="margin-bottom: 20px;">Settings</h2>
+
+
+                <div class="field full-width">
+                    <label>Upload Profile Photo</label>
+                    <input type="file" id="profilePhotoInput" accept="image/*">
+                </div>
+
+
+                <div class="field full-width" style="margin-top: 20px;">
+                    <img id="previewImage"
+                        style="width:120px; height:120px; border-radius:50%; object-fit:cover; border:2px solid #ccc;">
+                </div>
+
+                <div class="field full-width" style="margin-top: 20px;">
+                    <button id="savePhotoBtn" class="button">
+                        Save Photo
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="find-route-section icon-controled" id="route">
+
+            <div class="form-container">
+
+                <h2 style="margin-bottom:20px;">Find Route</h2>
+
+                <!-- Pickup -->
+                <div class="input-group">
+                    <label>Pickup Location</label>
+                    <div class="input-box">
+                        <i class="bx bx-map"></i>
+                        <input type="text" id="pickup" placeholder="Enter pickup location">
+                    </div>
+                </div>
+
+                <!-- Destination -->
+                <div class="input-group">
+                    <label>Destination</label>
+                    <div class="input-box">
+                        <i class="bx bx-map-pin"></i>
+                        <input type="text" id="destination" placeholder="Enter destination">
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <button class="penalty-btn" onclick="findRoute()">Find Route</button>
+
+
+
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="../js/route_find_interface.js"></script>
+    <script type="module" src="../js/public_homepage.js"></script>
+
+</body>
+
+</html>

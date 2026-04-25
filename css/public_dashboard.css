@@ -318,6 +318,9 @@ body.dark .menu-bar .mode i.moon {
 /* CARD */
 .dashboard .card {
     background: #fff;
+    width: 500px;
+    height: 200px;
+    margin: 30px;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);

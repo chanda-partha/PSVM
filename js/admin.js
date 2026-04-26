@@ -36,6 +36,14 @@ const modeText = body.querySelector(".mode-text");
 const reportTableBody = document.getElementById("report-table-body");
 const vehicleTableBody = document.getElementById("vehicle-table-body");
 
+const vehicleCountBox = document.querySelector(".vehicle-count"); 
+const userCountBox = document.querySelector(".user-count"); 
+const searchInput = document.getElementById("searchInput");
+
+
+
+let allVehicles = [];
+
 
 modeSwitch.addEventListener("click", () => {
     body.classList.toggle("dark");
@@ -46,10 +54,10 @@ modeSwitch.addEventListener("click", () => {
 });
 
 
-
 toggle.addEventListener("click", () => {
     sidebar.classList.toggle("close");
 });
+
 
 
 window.showIcons = function (id) {
@@ -99,21 +107,31 @@ function loadReports() {
 loadReports();
 
 
-
 function loadVehicles() {
 
     onSnapshot(collection(db, "users"), (snapshot) => {
 
         let count = 0;
+        let userCount = 0;
 
         vehicleTableBody.innerHTML = "";
+        allVehicles = [];
 
         snapshot.forEach((docSnap) => {
             const data = docSnap.data();
+            userCount++;
 
             if (data.role !== "vehicle") return;
 
-           
+            count++;
+
+            const vehicleObj = {
+                id: docSnap.id,
+                ...data
+            };
+
+            allVehicles.push(vehicleObj);
+
             const row = `
                 <tr>
                     <td style="padding:10px; border:1px solid #ddd;">
@@ -138,10 +156,14 @@ function loadVehicles() {
 
             vehicleTableBody.innerHTML += row;
         });
+
+        if (vehicleCountBox) vehicleCountBox.innerText = count;
+        if (userCountBox) userCountBox.innerText = userCount;
     });
 }
 
 loadVehicles();
+
 
 window.deleteVehicle = async function (uid) {
     try {
@@ -154,56 +176,43 @@ window.deleteVehicle = async function (uid) {
 };
 
 
-window.callAdmin = function () {
-    window.location.href = "tel:01537297935";
-};
+if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
 
-const vehicleCountBox = document.querySelector(".vehicle-count"); 
+        const value = e.target.value.toLowerCase();
 
-function countVehicles() {
-    onSnapshot(collection(db, "users"), (snapshot) => {
-        let count = 0;
+        const filtered = allVehicles.filter(v =>
+            v.ownerName?.toLowerCase().includes(value) ||
+            v.registrationNumber?.toLowerCase().includes(value) ||
+            v.vehicleModel?.toLowerCase().includes(value) ||
+            v.vehicleColor?.toLowerCase().includes(value)
+        );
 
-        snapshot.forEach((docSnap) => {
-            const data = docSnap.data();
-
-            if (data.role === "vehicle") {
-                count++;
-            }
-        });
-
-   
-        if (vehicleCountBox) {
-            vehicleCountBox.innerText = count;
-        }
-
-        console.log("Total Vehicles:", count);
+        renderVehicles(filtered);
     });
 }
 
-countVehicles();
 
-const userCountBox = document.querySelector(".user-count"); 
+function renderVehicles(list) {
+    vehicleTableBody.innerHTML = "";
 
+    list.forEach(data => {
+        const row = `
+            <tr>
+                <td>${data.ownerName}</td>
+                <td>${data.registrationNumber}</td>
+                <td>${data.vehicleModel}</td>
+                <td>${data.vehicleColor}</td>
+                <td>
+                    <button onclick="deleteVehicle('${data.id}')">Delete</button>
+                </td>
+            </tr>
+        `;
 
-function countUsers() {
-    onSnapshot(collection(db, "users"), (snapshot) => {
-        let count = 0;
-
-        snapshot.forEach(() => {
-            count++; 
-        });
-
-        if (userCountBox) {
-            userCountBox.innerText = count;
-        }
-
-        console.log("Total Users:", count);
+        vehicleTableBody.innerHTML += row;
     });
 }
 
-countUsers();
 
 //Made By - Tibro and Partha - 1240 - 1205
-
-// dynamic feature by - Partha Chanda- 1205
+// dynamic feature by - Partha Chanda - 1205

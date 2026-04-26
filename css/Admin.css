@@ -896,3 +896,71 @@ td {
         font-size: 13px;
     }
 }
+
+#registradedVehicle {
+    width: 100%;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow-x: auto;
+}
+
+#registradedVehicle table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+
+#registradedVehicle thead {
+    background: #1c55cf;
+    color: white;
+}
+
+#registradedVehicle th {
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+#registradedVehicle td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #333;
+}
+
+#registradedVehicle tbody tr:hover {
+    background: #f4f7ff;
+    transition: 0.2s;
+}
+
+#registradedVehicle button {
+    background: #ff3b3b;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+#registradedVehicle button:hover {
+    background: #d90000;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #registradedVehicle {
+        padding: 10px;
+    }
+
+    #registradedVehicle th,
+    #registradedVehicle td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

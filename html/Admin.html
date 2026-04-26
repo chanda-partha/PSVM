@@ -12,21 +12,19 @@
 
 <body>
 
-    <!--Made by - Tibro shill and Partha Chanda - 1240 / 1205-->
-
     <nav class="sidebar close" id="sidebar">
         <header>
+
             <div class="image-text">
                 <span class="image">
                     <img src="" alt="admin">
                 </span>
             </div>
+
             <div class="name-offcicer">
                 <span class="text name">Admin</span>
                 <span class="text designation">Owner</span>
             </div>
-
-
 
             <i class="bx bx-chevron-left toggle" id="rigth_transation_arrow"></i>
         </header>
@@ -39,8 +37,8 @@
                         <i class="bx bx-search icon"></i>
                         <input class="text search-input" type="text" placeholder="Search...">
                     </li>
-
                 </div>
+
                 <ul class="menu-links">
 
                     <li class="nav-link">
@@ -52,29 +50,35 @@
 
                     <li class="nav-link">
                         <a href="#" onclick="showIcons('admin-report-section')">
-                            <i class="bx bx-bus icon"></i>
+                            <i class="bx bx-flag icon"></i>
                             <span class="text nav-text">Reports</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="#" onclick="showSection('routes')">
+                        <a href="#">
                             <i class="bx bx-route icon">🛣️</i>
                             <span class="text nav-text">Routes</span>
                         </a>
                     </li>
+
                     <li class="nav-link">
-                        <a href="#" onclick="showSection('schedule')">
+                        <a href="#">
                             <i class="bx bx-time icon"></i>
                             <span class="text nav-text">Schedule</span>
                         </a>
                     </li>
-
-
+                    <li class="nav-link">
+                        <a onclick="showIcons('rVehicle')">
+                            <i class="bx bx-car icon"></i>
+                            <span class="text nav-text">Vehicle</span>
+                        </a>
+                    </li>
 
                     <div class="button-content">
+
                         <li class="nav-link">
-                            <a href="./index.html">
+                            <a href="../index.html">
                                 <i class="bx bx-log-out icon"></i>
                                 <span class="text nav-text">Logout</span>
                             </a>
@@ -82,63 +86,68 @@
 
                         <li class="mode">
                             <div class="moon-sun">
-                                <i class="bx bx-moon icon moon "></i>
+                                <i class="bx bx-moon icon moon"></i>
                                 <i class="bx bx-sun icon sun"></i>
                             </div>
+
                             <span class="text mode-text">Dark Mode</span>
 
                             <div class="toggle-switch">
                                 <span class="switch"></span>
                             </div>
                         </li>
+
                     </div>
 
                 </ul>
             </div>
+        </div>
     </nav>
 
 
     <section class="home">
 
-       
-            <div class="dashboard icon-controled active" id="dashboard">
-                <div class="card">
-                    <h3>Total Vehicles</h3>
-                    <div class="stats">25</div>
-                    <span class="badge yellow">4 in maintenance</span>
-                </div>
 
+        <div class="dashboard icon-controled active" id="dashboard">
 
-                <div class="card">
-                    <h3>Active Routes</h3>
-                    <div class="stats">12</div>
-                    <span class="badge red">2 suspended</span>
-                </div>
-
-
-                <div class="card">
-                    <h3>Total Drivers</h3>
-                    <div class="stats">18</div>
-                    <span class="badge green">3 off duty</span>
-                </div>
-
-
-                <div class="card">
-                    <h3>Today's Bookings</h3>
-                    <div class="stats">154</div>
-                    <p>+12% vs yesterday</p>
-                    <a href="#" class="button">View</a>
-                </div>
+            <div class="card">
+                <h3>Total Vehicles</h3>
+                <div class="stats vehicle-count">0</div>
             </div>
 
+            <div class="card">
+                <h3>Active Routes</h3>
+                <div class="stats">12</div>
+            </div>
 
-        <div id="admin-report-section" class="content-section">
+            <div class="card">
+                <h3>Total Drivers</h3>
+                <div class="stats">18</div>
+            </div>
+            <div class="card">
+                <h3>Total Users</h3>
+                <div class="stats user-count">0</div>
+            </div>
+
+            <div class="card">
+                <h3>Today's Bookings</h3>
+                <div class="stats">154</div>
+            </div>
+
+        </div>
+
+
+
+        <div id="admin-report-section" class="content-section icon-controled">
+
             <div class="dashboard">
 
                 <div class="card" style="width:100%;">
+
                     <h3>Submitted Reports</h3>
 
                     <table style="width:100%; margin-top:15px; border-collapse: collapse;">
+
                         <thead>
                             <tr style="background:#1c55cf; color:white;">
                                 <th style="padding:10px;">Reporter</th>
@@ -148,33 +157,35 @@
                         </thead>
 
                         <tbody id="report-table-body">
-                            <!-- Reports will load here -->
+
                         </tbody>
+
                     </table>
 
                 </div>
 
             </div>
+
         </div>
 
 
+        <div class="vehicle icon-controled" id="rVehicle">
+            <table style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Reg No</th>
+                        <th>Model</th>
+                        <th>Color</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
 
+                <tbody id="vehicle-table-body"></tbody>
+            </table>
+        </div>
 
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <script type="module" src="../js/admin.js"></script>

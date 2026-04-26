@@ -23,23 +23,9 @@ toggle.addEventListener('click', () => {
 });
 
 
-
-function showSection(sectionName) {
-    
-    document.querySelectorAll('.content-section').forEach(section => {
-        section.classList.remove('active-section');
-    });
-    
-   
-    const activeSection = document.getElementById(`${sectionName}-section`);
-    if (activeSection) {
-        activeSection.classList.add('active-section');
-    }
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    showSection('dashboard');
-});
-
+window.showIcons = function (id) {
+  document.querySelectorAll(".icon-controled").forEach(el => el.classList.remove("active"));
+  const target = document.getElementById(id);
+  if (target) target.classList.add("active");
+};
 //PARTHA 1205 & TIBRO 1240 

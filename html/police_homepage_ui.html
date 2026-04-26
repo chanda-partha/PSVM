@@ -59,7 +59,7 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="police_case_records_ui.html">
+                        <a onclick="showIcons('caseRecord')">
                             <i class="bx bx-file icon"></i>
                             <span class="text nav-text">Case Records</span>
                         </a>
@@ -73,7 +73,7 @@
 
 
                     <li class="nav-link">
-                        <a href="police_complaints_ui.html">
+                        <a onclick="showIcons('complaint')">
                             <i class="bx bx-comment icon"></i>
                             <span class="text nav-text">Complaints</span>
                         </a>
@@ -301,6 +301,26 @@
                 </button>
 
             </div>
+
+        </div>
+
+        <div class="complaint-box icon-controled" id="complaint">
+
+            <h2>Submitted Complaints</h2>
+
+            <div id="complaintContainer" class="complaint-list"></div>
+
+        </div>
+
+        <div class="case-record icon-controled" id="caseRecord">
+
+            <h2>Case Record (All Penalties)</h2>
+
+            <div class="case-stats">
+                Total Cases: <b id="totalCases">0</b>
+            </div>
+
+            <div id="caseContainer" class="case-list"></div>
 
         </div>
 

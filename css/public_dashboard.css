@@ -571,3 +571,112 @@ label {
         font-size: 18px;
     }
 }
+
+/* SECTION WRAPPER */
+#complain {
+ 
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+/* FORM CONTAINER */
+#complain .form-container {
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* TITLE */
+#complain h2 {
+    text-align: center;
+    color: #1c55cf;
+    font-weight: 600;
+}
+
+/* INPUT GROUP */
+#complain .input-group {
+    margin-bottom: 18px;
+}
+
+/* LABEL */
+#complain label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #444;
+    font-weight: 500;
+}
+
+/* INPUT BOX */
+#complain .input-box {
+    display: flex;
+    align-items: center;
+    background: #f5f7fb;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.2s;
+    border: 1px solid transparent;
+}
+
+/* ICON */
+#complain .input-box i {
+    font-size: 18px;
+    color: #1c55cf;
+    margin-right: 10px;
+}
+
+/* INPUT & TEXTAREA */
+#complain .input-box input,
+#complain .input-box textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+/* TEXTAREA SPECIFIC */
+#complain textarea {
+    resize: none;
+    min-height: 80px;
+}
+
+/* FOCUS EFFECT */
+#complain .input-box:focus-within {
+    border: 1px solid #1c55cf;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(28, 85, 207, 0.1);
+}
+
+/* BUTTON */
+#complain .penalty-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #1c55cf, #4f8cff);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+#complain .penalty-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(28, 85, 207, 0.3);
+}
+
+/* SUCCESS MESSAGE */
+#complain #msg {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    color: green;
+}

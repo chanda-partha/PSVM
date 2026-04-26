@@ -1,7 +1,14 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
-import { getFirestore, getDoc, doc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+import {
+    getFirestore,
+    getDoc,
+    doc,
+    collection,
+    addDoc,
+    serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 
 
 const firebaseConfig = {
@@ -40,7 +47,7 @@ onAuthStateChanged(auth, async (user) => {
             console.error("Error getting document:", error);
         }
     } else {
-       
+
         window.location.href = "../index.html";
     }
 });
@@ -58,5 +65,43 @@ logoutButton.addEventListener('click', () => {
         });
 });
 
+
+const submitBtn = document.getElementById("btn-report-submit");
+
+if (submitBtn) {
+    submitBtn.addEventListener("click", async () => {
+
+        const name = document.getElementById("enter-name").value.trim();
+        const report = document.getElementById("reportText").value.trim();
+        const vehicleNumber = document.getElementById("vehicleNumber").value.trim();
+
+        if (!name || !report || !vehicleNumber) {
+            alert("Please fill all fields");
+            return;
+        }
+
+        try {
+            await addDoc(collection(db, "complains"), {
+                reporterName: name,
+                report: report,
+                vehicleNumber: vehicleNumber,
+                userId: auth.currentUser ? auth.currentUser.uid : null,
+                createdAt: serverTimestamp()
+            });
+
+            document.getElementById("msg").innerText = "Complaint submitted successfully!";
+
+            // Clear fields
+            document.getElementById("enter-name").value = "";
+            document.getElementById("reportText").value = "";
+            document.getElementById("vehicleNumber").value = "";
+
+        } catch (error) {
+            console.error("Error adding complaint:", error);
+            alert("Failed to submit complaint");
+        }
+
+    });
+}
 
 //PARTHA || 1205

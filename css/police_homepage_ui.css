@@ -527,3 +527,90 @@ label {
     box-shadow: 0 6px 15px rgba(220,38,38,0.4);
 }
 
+
+.complaint-box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin-top: 20px;
+}
+
+.complaint-box h2 {
+    margin-bottom: 15px;
+    color: #1c55cf;
+}
+
+/* Each complaint card */
+.complaint-item {
+    background: #f7f9fc;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    border-left: 4px solid #1c55cf;
+    transition: 0.2s;
+}
+
+.complaint-item:hover {
+    transform: translateY(-2px);
+    background: #eef3ff;
+}
+
+/* Text styles */
+.complaint-item .name {
+    font-weight: bold;
+    color: #333;
+}
+
+.complaint-item .vehicle {
+    font-size: 13px;
+    color: #666;
+}
+
+.complaint-item .text {
+    margin-top: 5px;
+    color: #444;
+}
+
+.complaint-item .time {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+}
+
+.case-record {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.case-record h2 {
+    color: #1c55cf;
+    margin-bottom: 10px;
+}
+
+.case-stats {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.case-card {
+    background: #f8fafc;
+    padding: 12px;
+    margin-top: 10px;
+    border-left: 4px solid #e74c3c;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.case-card:hover {
+    transform: translateY(-2px);
+    background: #eef3ff;
+}
+
+.case-card p {
+    margin: 4px 0;
+    font-size: 14px;
+}

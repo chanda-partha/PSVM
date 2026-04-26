@@ -13,6 +13,7 @@ import {
   getDoc,
   collection,
   addDoc,
+  getDocs,
   serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 
@@ -27,41 +28,44 @@ const firebaseConfig = {
   appId: "1:486392673926:web:3aaad5395d2b2ddc738307"
 };
 
-//Made By - Partha Chanda - 1205
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-const body = document.querySelector('body');
-const sidebar = document.querySelector('.sidebar');
-const toggle = document.querySelector('.toggle');
-const modeSwitch = document.querySelector(".toggle-switch");
-const modeText = document.querySelector('.mode-text');
 
+
+
+const body = document.querySelector("body");
+const sidebar = document.querySelector(".sidebar");
+const toggle = document.querySelector(".toggle");
+const modeSwitch = document.querySelector(".toggle-switch");
+const modeText = document.querySelector(".mode-text");
 
 if (modeSwitch) {
-  modeSwitch.addEventListener('click', () => {
-    body.classList.toggle('dark');
-    if (modeText) {
-      modeText.innerText = body.classList.contains('dark') ? "Light mode" : "Dark mode";
-    }
+  modeSwitch.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    modeText.innerText = body.classList.contains("dark")
+      ? "Light mode"
+      : "Dark mode";
   });
 }
-
 
 if (toggle) {
-  toggle.addEventListener('click', () => {
-    if (sidebar) sidebar.classList.toggle('close');
+  toggle.addEventListener("click", () => {
+    if (sidebar) sidebar.classList.toggle("close");
   });
 }
+
+
 
 
 window.showIcons = function (id) {
-  document.querySelectorAll(".icon-controled").forEach(el => el.classList.remove("active"));
+  document.querySelectorAll(".icon-controled")
+    .forEach(el => el.classList.remove("active"));
+
   const target = document.getElementById(id);
   if (target) target.classList.add("active");
 };
-
 
 
 let base64Image = "";
@@ -71,23 +75,18 @@ const preview = document.getElementById("previewImage");
 const saveBtn = document.getElementById("savePhotoBtn");
 const sidebarImg = document.getElementById("sidebarPhoto");
 
-
 window.addEventListener("load", () => {
-  const savedImage = localStorage.getItem("profilePhoto");
-  if (savedImage && sidebarImg) {
-    sidebarImg.src = savedImage;
-  }
+  const saved = localStorage.getItem("profilePhoto");
+  if (saved && sidebarImg) sidebarImg.src = saved;
 });
 
-// Select image
 if (fileInput) {
   fileInput.addEventListener("change", (e) => {
     const file = e.target.files[0];
     if (!file) return;
 
     if (file.size > 2000000) {
-      alert("Image too large! Max 200KB");
-      return;
+      return alert("Image too large (max 2MB)");
     }
 
     const reader = new FileReader();
@@ -99,19 +98,14 @@ if (fileInput) {
   });
 }
 
-// Save image
 if (saveBtn) {
   saveBtn.addEventListener("click", () => {
-    if (!base64Image) {
-      alert("Select an image first");
-      return;
-    }
+    if (!base64Image) return alert("Select image first");
 
     localStorage.setItem("profilePhoto", base64Image);
-
     if (sidebarImg) sidebarImg.src = base64Image;
 
-    alert("Profile photo updated!");
+    alert("Profile updated!");
   });
 }
 
@@ -124,9 +118,16 @@ onAuthStateChanged(auth, async (user) => {
     return;
   }
 
-  try {
-    const snap = await getDoc(doc(db, "users", user.uid));
+  loadUserData(user);
+});
 
+
+
+async function loadUserData(user) {
+
+  try {
+
+    const snap = await getDoc(doc(db, "users", user.uid));
     if (!snap.exists()) return;
 
     const data = snap.data();
@@ -153,12 +154,93 @@ onAuthStateChanged(auth, async (user) => {
 
     set("nationality", "Bangladeshi");
 
-  } catch (err) {
-    console.error("User load error:", err);
-  }
-});
 
-//fine
+
+
+    const complaintBox = document.getElementById("complaintContainer");
+
+    if (complaintBox) {
+
+      const snap2 = await getDocs(collection(db, "complains"));
+
+      let html = "";
+
+      snap2.forEach(docSnap => {
+        const c = docSnap.data();
+
+        html += `
+          <div class="complaint-card" style="
+              background:#f8fafc;
+              padding:12px;
+              margin-top:10px;
+              border-left:4px solid #1c55cf;
+              border-radius:8px;
+          ">
+              <p><b>👤 Name:</b> ${c.reporterName || "Unknown"}</p>
+              <p><b>🚗 Vehicle:</b> ${c.vehicleNumber || "N/A"}</p>
+              <p><b>📝 Complaint:</b> ${c.report || "-"}</p>
+              <p><b>⏰ Time:</b> ${c.createdAt?.toDate
+            ? c.createdAt.toDate().toLocaleString()
+            : "N/A"
+          }</p>
+          </div>
+        `;
+      });
+
+      complaintBox.innerHTML = html || "<p>No complaints found</p>";
+    }
+
+
+
+    const caseBox = document.getElementById("caseContainer");
+    const totalCase = document.getElementById("totalCases");
+
+    if (caseBox) {
+
+      const snap3 = await getDocs(collection(db, "fines"));
+
+      let html = "";
+      let count = 0;
+
+      snap3.forEach(docSnap => {
+
+        const f = docSnap.data();
+
+        if (f.issuedBy === user.uid) {
+
+          count++;
+
+          html += `
+            <div class="case-card" style="
+                background:#f8fafc;
+                padding:12px;
+                margin-top:10px;
+                border-left:4px solid red;
+                border-radius:8px;
+            ">
+
+                <p><b>🚗 Reg:</b> ${f.regNumber}</p>
+                <p><b>💰 Amount:</b> ৳${f.amount}</p>
+                <p><b>📝 Reason:</b> ${f.reason}</p>
+                <p><b>⏰ Time:</b> ${f.createdAt?.toDate
+              ? f.createdAt.toDate().toLocaleString()
+              : "N/A"
+            }</p>
+
+            </div>`;
+        }
+      });
+
+      caseBox.innerHTML = html || "<p>No fines issued by you</p>";
+      if (totalCase) totalCase.innerText = count;
+    }
+
+  } catch (err) {
+    console.error("loadUserData error:", err);
+  }
+}
+
+
 
 const fineBtn = document.getElementById("submitPenaltyBtn");
 
@@ -171,48 +253,28 @@ if (fineBtn) {
     const reason = document.getElementById("penaltyReason")?.value.trim();
 
     if (!regNumber || !amount || !reason) {
-      alert("⚠️ Fill all fields");
-      return;
+      return alert("Fill all fields");
     }
 
-    if (amount <= 0) {
-      alert("⚠️ Invalid amount");
-      return;
-    }
+    await addDoc(collection(db, "fines"), {
+      regNumber: regNumber.toUpperCase(),
+      amount: Number(amount),
+      reason,
+      issuedBy: auth.currentUser.uid,
+      createdAt: serverTimestamp()
+    });
 
-    try {
-      await addDoc(collection(db, "fines"), {
-        regNumber: regNumber.toUpperCase(),
-        amount: Number(amount),
-        reason,
-        issuedBy: auth.currentUser?.uid || "unknown",
-        createdAt: serverTimestamp()
-      });
-
-      alert("✅ Fine issued!");
-
-      document.getElementById("penaltyRegNumber").value = "";
-      document.getElementById("penaltyAmount").value = "";
-      document.getElementById("penaltyReason").value = "";
-
-    } catch (err) {
-      console.error(err);
-      alert("❌ Failed to issue fine");
-    }
+    alert("Fine issued!");
   });
 }
 
 
-const logoutButton = document.getElementById('logout');
+const logoutButton = document.getElementById("logout");
 
 if (logoutButton) {
-  logoutButton.addEventListener('click', () => {
+  logoutButton.addEventListener("click", () => {
     signOut(auth)
-      .then(() => {
-        window.location.href = "../index.html";
-      })
-      .catch(err => console.error("Logout error:", err));
+      .then(() => window.location.href = "../index.html")
+      .catch(err => console.error(err));
   });
 }
-
-//PARTHA || 1205

@@ -14,7 +14,7 @@
 
 <body>
 
-<!-- Made by - Partha Chanda - 1205 -->
+    <!-- Made by - Partha Chanda - 1205 -->
     <nav class="sidebar close" id="sidebar">
         <header>
             <div class="image-text">
@@ -68,11 +68,20 @@
                     </li>
 
                     <li class="nav-link">
+                        <a onclick="showIcons('complain')">
+                            <i class="bx bx-cog icon"></i>
+                            <span class="text nav-text">Complain</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
                         <a onclick="showIcons('settings')">
                             <i class="bx bx-cog icon"></i>
                             <span class="text nav-text">Settings</span>
                         </a>
                     </li>
+
+
 
 
 
@@ -212,6 +221,50 @@
 
         </div>
 
+        <div class="complain icon-controled" id="complain">
+
+            <div class="form-container">
+
+                <h2 style="margin-bottom:20px;">Submit Complaint</h2>
+
+                <!-- Vehicle Number -->
+                <div class="input-group">
+                    <label>Vehicle Number</label>
+                    <div class="input-box">
+                        <i class="bx bx-car"></i>
+                        <input type="text" id="vehicleNumber" placeholder="Enter vehicle number">
+                    </div>
+                </div>
+
+                <!-- Name -->
+                <div class="input-group">
+                    <label>Your Name</label>
+                    <div class="input-box">
+                        <i class="bx bx-user"></i>
+                        <input type="text" id="enter-name" placeholder="Enter your name">
+                    </div>
+                </div>
+
+                <!-- Complaint -->
+                <div class="input-group">
+                    <label>Complaint</label>
+                    <div class="input-box">
+                        <i class="bx bx-message-square-detail"></i>
+                        <textarea id="reportText" placeholder="Write your complaint..." rows="4"></textarea>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <button class="penalty-btn" id="btn-report-submit">
+                    Submit Complaint
+                </button>
+
+                <!-- Message -->
+                <p id="msg" style="margin-top:10px; color:green;"></p>
+
+            </div>
+
+        </div>
 
 
     </section>

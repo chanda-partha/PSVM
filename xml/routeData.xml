@@ -1,0 +1,33 @@
+<routes>
+
+    <route>
+        <pickup>haidgaon</pickup>
+        <destination>patiya</destination>
+        <bus>30</bus>
+        <cng>120</cng>
+        <bike>80</bike>
+        <rickshaw>60</rickshaw>
+        <time>20 min</time>
+    </route>
+
+    <route>
+        <pickup>patiya</pickup>
+        <destination>indropul</destination>
+        <bus>30</bus>
+        <cng>120</cng>
+        <bike>80</bike>
+        <rickshaw>60</rickshaw>
+        <time>20 min</time>
+    </route>
+
+    <route>
+        <pickup>chakbazar</pickup>
+        <destination>patiya</destination>
+        <bus>40</bus>
+        <cng>150</cng>
+        <bike>100</bike>
+        <rickshaw>70</rickshaw>
+        <time>25 min</time>
+    </route>
+
+</routes>

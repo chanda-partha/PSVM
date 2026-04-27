@@ -13,11 +13,11 @@
     <route>
         <pickup>patiya</pickup>
         <destination>indropul</destination>
-        <bus>30</bus>
-        <cng>120</cng>
-        <bike>80</bike>
-        <rickshaw>60</rickshaw>
-        <time>20 min</time>
+        <bus>5</bus>
+        <cng>10</cng>
+        <bike>n/a</bike>
+        <rickshaw>20</rickshaw>
+        <time>5 min</time>
     </route>
 
     <route>
